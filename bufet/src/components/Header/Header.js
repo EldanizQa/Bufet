@@ -16,7 +16,7 @@ const Header = () => {
         <div className="navbar">
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars
-              style={{ color: "#060b26" }}
+              // style={{ color: "#060b26" }}
               onClick={showSidebar}
               className="menu-bars__lines"
             />
