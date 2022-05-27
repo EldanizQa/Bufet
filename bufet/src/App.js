@@ -10,7 +10,7 @@ import Map from "./components/Azerbaijan/Map.js";
 import "leaflet/dist/leaflet.css";
 function App() {
   return (
-    <div className="App" style={{ height: "2000px" }}>
+    <div className="App" style={{ height: "2000px" ,width:"1000px"}}>
       <Header />
       <Routes>
         <Route path="/" exact component={MainPage} />
