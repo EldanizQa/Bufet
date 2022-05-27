@@ -1,5 +1,5 @@
 import React from "react";
-import { MapContainer, TileLayer, Polygon, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Polygon, Marker, Popup, ZoomControl } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { statesData } from "./data";
 import "./Map.css";
@@ -9,17 +9,20 @@ const markerIcon = L.icon({
   iconUrl: require("../../assets/Icons/icon2.png"),
   iconSize: [35, 40],
 });
-
 const center = [40.367421050763554, 48.15512358371176];
-
+ 
 function Map() {
   return (
+    <div className="map-div">
+      
     <MapContainer
+      zoomControl={false}
       center={center}
       zoom={8}
+      scrollWheelZoom={false}
       style={{
-        width: "100vw",
-        height: "80vh",
+        width: "100%",
+        height: "100vh",
         margin: "0 auto",
       }}
     >
@@ -27,6 +30,10 @@ function Map() {
         url="https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=dZOt5h8VzjgQ9hrjLbT7"
         attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
       />
+      {/* <ZoomControl
+      zoomControl={false}
+      >
+      </ZoomControl> */}
       <Marker
         position={[39.27187552341733, 45.40949814987457]}
         icon={markerIcon}
@@ -73,9 +80,9 @@ function Map() {
         return (
           <Polygon
             pathOptions={{
-              fillColor: "orange",
+              fillColor: "#00828c",
               fillOpacity: 0.7,
-              weight: 2,
+              weight: 1,
               opacity: 1,
               dashArray: 3,
               color: "white",
@@ -85,7 +92,7 @@ function Map() {
               mouseover: (e) => {
                 const layer = e.target;
                 layer.setStyle({
-                  fillColor: "green",
+                  fillColor: "orange",
                   fillOpacity: 0.7,
                   weight: 2,
                   opacity: 1,
@@ -96,10 +103,10 @@ function Map() {
                 const layer = e.target;
                 layer.setStyle({
                   fillOpacity: 0.7,
-                  weight: 2,
+                  weight: 1,
                   dashArray: "3",
                   color: "white",
-                  fillColor: "orange",
+                  fillColor: "#00828c",
                 });
               },
               click: (e) => {},
@@ -108,6 +115,7 @@ function Map() {
         );
       })}
     </MapContainer>
+    </div>
   );
 }
 export default Map;
