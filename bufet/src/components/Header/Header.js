@@ -15,7 +15,11 @@ const Header = () => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
           <Link to="#" className="menu-bars">
-            <FaIcons.FaBars onClick={showSidebar} className="menu-bars__lines" />
+            <FaIcons.FaBars
+              style={{ color: "#060b26" }}
+              onClick={showSidebar}
+              className="menu-bars__lines"
+            />
           </Link>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
