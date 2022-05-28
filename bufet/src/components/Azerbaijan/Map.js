@@ -21,6 +21,7 @@ function Map() {
         width: "100vw",
         height: "80vh",
         margin: "0 auto",
+        // zIndex: "-1",
       }}
     >
       <TileLayer
@@ -32,8 +33,8 @@ function Map() {
         icon={markerIcon}
       >
         <Popup>
-          <a href="https://ru.wikipedia.org/wiki/Нахичевань">
-            Naxcivan-столица Нахичеванской Автономной Республики
+          <a href="https://en.wikipedia.org/wiki/Nakhchivan_Autonomous_Republic">
+            Nakhchivan Autonomous Republic
           </a>
         </Popup>
       </Marker>
@@ -43,7 +44,7 @@ function Map() {
         icon={markerIcon}
       >
         <Popup>
-          <a href="https://ru.wikipedia.org/wiki/Нахичевань">Quba</a>
+          <a href="https://en.wikipedia.org/wiki/Quba">Quba</a>
         </Popup>
       </Marker>
 
@@ -52,7 +53,7 @@ function Map() {
         icon={markerIcon}
       >
         <Popup>
-          <a href="https://ru.wikipedia.org/wiki/Нахичевань">Baki</a>
+          <a href="https://en.wikipedia.org/wiki/Baku">Baku</a>
         </Popup>
       </Marker>
 
@@ -61,7 +62,7 @@ function Map() {
         icon={markerIcon}
       >
         <Popup>
-          <a href="https://ru.wikipedia.org/wiki/Нахичевань">Şuşa</a>
+          <a href="https://en.wikipedia.org/wiki/Shusha">Shusha</a>
         </Popup>
       </Marker>
       {statesData.features.map((state) => {
@@ -74,7 +75,7 @@ function Map() {
           <Polygon
             pathOptions={{
               fillColor: "orange",
-              fillOpacity: 0.7,
+              fillOpacity: 1,
               weight: 2,
               opacity: 1,
               dashArray: 3,
@@ -86,7 +87,7 @@ function Map() {
                 const layer = e.target;
                 layer.setStyle({
                   fillColor: "green",
-                  fillOpacity: 0.7,
+                  fillOpacity: 1,
                   weight: 2,
                   opacity: 1,
                   color: "white",
@@ -95,7 +96,7 @@ function Map() {
               mouseout: (e) => {
                 const layer = e.target;
                 layer.setStyle({
-                  fillOpacity: 0.7,
+                  fillOpacity: 1,
                   weight: 2,
                   dashArray: "3",
                   color: "white",
