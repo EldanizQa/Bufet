@@ -47,7 +47,7 @@ const Azerbaijan = () => {
           icon={markerIcon}
         >
           <Popup>
-            <Link href="https://ru.wikipedia.org/wiki/Нахичевань">
+            <Link to="/nakhchivan">
               Naxcivan-столица Нахичеванской Автономной Республики
             </Link>
           </Popup>
@@ -58,7 +58,7 @@ const Azerbaijan = () => {
           icon={markerIcon}
         >
           <Popup>
-            <Link to="../Regions/Quba">Quba</Link>
+            <Link to="/quba">Quba</Link>
           </Popup>
         </Marker>
 
@@ -67,7 +67,7 @@ const Azerbaijan = () => {
           icon={markerIcon}
         >
           <Popup>
-            <Link href="https://ru.wikipedia.org/wiki/Нахичевань">Baki</Link>
+            <Link to="/baku">Baki</Link>
           </Popup>
         </Marker>
 
@@ -76,7 +76,7 @@ const Azerbaijan = () => {
           icon={markerIcon}
         >
           <Popup>
-            <Link to="https://ru.wikipedia.org/wiki/Нахичевань">Şuşa</Link>
+            <Link to="/shusha">Şuşa</Link>
           </Popup>
         </Marker>
         {statesData.features.map((state) => {

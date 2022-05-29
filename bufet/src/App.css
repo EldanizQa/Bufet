@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  background: #333;
+}
