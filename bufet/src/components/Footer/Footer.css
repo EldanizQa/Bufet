@@ -41,6 +41,7 @@ h5 {
 .footer__sitemap {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer__title {
@@ -52,6 +53,7 @@ h5 {
 
 .footer__list-item {
   margin-bottom: 6px;
+  margin-right: 10px;
 }
 
 .footer__list-link {
@@ -61,4 +63,18 @@ h5 {
 
 .footer__list-link:hover {
   color: rgb(106, 114, 132);
+}
+
+.footer__section-sub {
+  padding: 16px 24px;
+  border-top: 1px solid rgb(106, 114, 132);
+  background-color: rgb(38, 38, 38);
+  color: #eeeff3;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-around;
 }

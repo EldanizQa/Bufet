@@ -8,10 +8,10 @@ const Footer = () => {
           <div className="footer__content">
             <a className="footer__logo">
               <img
-                src={require("../../assets/Icons/relax.jpg")}
+                // src={require("../../assets/Icons/1.png")}
                 className="footer__img"
-                width={"124px"}
-                height={"64px"}
+                width={"120px"}
+                height={"80px"}
               />
             </a>
             <div className="footer__sitemap">
@@ -114,6 +114,26 @@ const Footer = () => {
                     <a className="footer__list-link">Pricing Overview</a>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="footer__section-sub">
+        <div className="footer__container">
+          <div className="footer__content">
+            <div className="footer__copyright">
+              <div>
+                <a>©2022 Hologram</a>
+              </div>
+              <div>
+                <a>Terms</a>
+              </div>
+              <div>
+                <a>Privacy</a>
+              </div>
+              <div>
+                <a>Product Privacy Notice</a>
               </div>
             </div>
           </div>
