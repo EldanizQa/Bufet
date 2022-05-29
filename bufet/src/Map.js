@@ -29,7 +29,7 @@ const center = [40.367421050763554, 48.15512358371176];
       style={{ width: '100vw', height: '100vh' }}
     >
       <TileLayer
-        url="https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=dZOt5h8VzjgQ9hrjLbT7"
+        url="https://api.maptiler.com/maps/bright/256/{z}/{x}/{y}.png?key=dZOt5h8VzjgQ9hrjLbT7"
         attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
       />
        <Marker position={[39.27187552341733, 45.40949814987457]} icon={markerIcon} >
@@ -62,7 +62,7 @@ const center = [40.367421050763554, 48.15512358371176];
           return (<Polygon
             pathOptions={{
               fillColor: 'orange',
-              fillOpacity: 0.7,
+              fillOpacity:1,
               weight: 2,
               opacity: 1,
               dashArray: 3,
@@ -74,7 +74,7 @@ const center = [40.367421050763554, 48.15512358371176];
                 const layer = e.target;
                 layer.setStyle({
                   fillColor: "green",
-                  fillOpacity: 0.7,
+                  fillOpacity: 1,
                   weight: 2,
                   opacity: 1,
                   color: "white",
@@ -83,7 +83,7 @@ const center = [40.367421050763554, 48.15512358371176];
               mouseout: (e) => {
                 const layer = e.target;
                 layer.setStyle({
-                  fillOpacity: 0.7,
+                  fillOpacity: 1,
                   weight: 2,
                   dashArray: "3",
                   color: 'white',
