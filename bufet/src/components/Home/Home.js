@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Azerbaijan from "../Azerbaijan/Azerbaijan";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  return <Azerbaijan />;
+};
 
-export default Home
+export default Home;
