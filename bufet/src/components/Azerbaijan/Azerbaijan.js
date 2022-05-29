@@ -58,7 +58,7 @@ const Azerbaijan = () => {
           icon={markerIcon}
         >
           <Popup>
-            <Link to="../Regions/Quba">Quba</Link>
+            <Link to="/quba">Quba</Link>
           </Popup>
         </Marker>
 
