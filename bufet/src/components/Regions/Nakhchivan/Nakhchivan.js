@@ -9,7 +9,7 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { statesData } from "./data";
-import "./Baku.css";
+import "./Nakhchivan.css";
 import L from "leaflet";
 import { Link } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const markerIcon = L.icon({
 });
 const center = [41.191148227358866, 48.49190523563717];
 let zoom = 10;
-const Baku = () => {
+const Nakhchivan = () => {
   return (
     <div className="map-div">
       <MapContainer
@@ -126,4 +126,4 @@ const Baku = () => {
     </div>
   );
 };
-export default Baku;
+export default Nakhchivan;
