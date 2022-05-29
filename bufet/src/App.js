@@ -13,7 +13,20 @@ import Baku from "./components/Regions/Baku/Baku";
 import Nakhchivan from "./components/Regions/Nakhchivan/Nakhchivan";
 import Shusha from "./components/Regions/Shusha/Shusha";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    centerMode: true,
+    focusOnSelect: true,
+  };
   return (
     <div className="App">
       <Navbar />
@@ -27,6 +40,56 @@ function App() {
         <Route path="/nakhchivan" element={<Nakhchivan />} />
         <Route path="/shusha" element={<Shusha />} />
       </Routes>
+      <Slider className="slider" {...settings}>
+        <div className="card-wrapper">
+          <div className="card">
+            <div className="card-image">
+              <img src={require("./assets/Icons/images/1.jpg")} />
+            </div>
+            <div className="details">
+              <h2>
+                John Doe <span className="job-title">UI Developer</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className="card-wrapper">
+          <div className="card">
+            <div className="card-image">
+              <img src={require("./assets/Icons/images/4.jpg")} />
+            </div>
+            <div className="details">
+              <h2>
+                John Doe <span className="job-title">UI Developer</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className="card-wrapper">
+          <div className="card">
+            <div className="card-image">
+              <img src={require("./assets/Icons/images/3.jpg")} />
+            </div>
+            <div className="details">
+              <h2>
+                John Doe <span className="job-title">UI Developer</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className="card-wrapper">
+          <div className="card">
+            <div className="card-image">
+              <img src={require("./assets/Icons/images/2.jpg")} />
+            </div>
+            <div className="details">
+              <h2>
+                John Doe <span className="job-title">UI Developer</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </Slider>
       <Footer />
     </div>
   );
