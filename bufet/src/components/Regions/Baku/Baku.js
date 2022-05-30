@@ -17,8 +17,8 @@ const markerIcon = L.icon({
   iconUrl: require("../../../assets/Icons/icon2.png"),
   iconSize: [35, 40],
 });
-const center = [41.191148227358866, 48.49190523563717];
-let zoom = 10;
+const center = [40.40508337134207, 49.86391827210291];
+let zoom = 13;
 const Baku = () => {
   return (
     <div className="map-div">
@@ -43,14 +43,22 @@ const Baku = () => {
       >
       </ZoomControl> */}
         <Marker
-          position={[40.411089277947596, 49.876886131147195]}
+          position={[40.36622198038845, 49.83723127005067]}
           icon={markerIcon}
         >
           <Popup>
-            <Link href="https://ru.wikipedia.org/wiki/Нахичевань">Baki</Link>
+            <a>Maiden Tower</a>
           </Popup>
         </Marker>
-
+        <Marker
+          position={[40.366227056183405, 49.83368716820791]}
+          icon={markerIcon}
+        >
+          <Popup>
+            <a>Palace of the Shirvanshahs </a>
+          </Popup>
+        </Marker>
+        
         {statesData.features.map((state) => {
           const coordinates = state.geometry.coordinates[0].map((item) => [
             item[1],
