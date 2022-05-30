@@ -12,6 +12,7 @@ import Quba from "./components/Regions/Quba/Quba";
 import Baku from "./components/Regions/Baku/Baku";
 import Nakhchivan from "./components/Regions/Nakhchivan/Nakhchivan";
 import Shusha from "./components/Regions/Shusha/Shusha";
+import Map from "./components/MapApi/Map";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      {/* <Map/> */}
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/home" element={<Home />} />
