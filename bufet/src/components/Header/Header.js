@@ -1,49 +1,46 @@
 import React, { useState } from "react";
-import { IconContext } from "react-icons";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
-import { SidebarData } from "../SidebarData/SidebarData";
 
-const Header = () => {
-  const [sidebar, setSidebar] = useState(false);
+const Navbar = () => {
+  const [isMobile, setisMobile] = useState(false);
 
-  const showSidebar = () => setSidebar(!sidebar);
   return (
-    <header className="header">
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <div className="navbar">
-          <Link to="#" className="menu-bars">
-            <FaIcons.FaBars
-              style={{ color: "#060b26" }}
-              onClick={showSidebar}
-              className="menu-bars__lines"
-            />
-          </Link>
-        </div>
-        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-          <ul className="nav-menu-items" onClick={showSidebar}>
-            <li className="navbar-toggle">
-              <Link to="#" className="menu-bars">
-                <AiIcons.AiOutlineClose />
-              </Link>
-            </li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </IconContext.Provider>
-    </header>
+    <nav className="navbar">
+      {/* <NavLink to='/'> */}
+      {/* <img className="logo" src={require('../../assets/Icons/logo.png')}/> */}
+      {/* </NavLink> */}
+      {/* <h3 className='logo'>RestMap</h3> */}
+      <h3 className="logo">RestMap</h3>
+      <ul
+        className={isMobile ? "nav-links-mobile" : "nav-links"}
+        onClick={() => setisMobile(false)}
+      >
+        <Link to="/home" className="home">
+          <li>Home</li>
+        </Link>
+        <Link to="/about" className="about">
+          <li>About</li>
+        </Link>
+        <Link to="/travel" className="travel">
+          <li>Travel</li>
+        </Link>
+        <Link to="/contact" className="contact">
+          <li>Contact</li>
+        </Link>
+      </ul>
+      <button
+        className="mobile-menu-icon"
+        onClick={() => setisMobile(!isMobile)}
+      >
+        {isMobile ? (
+          <i className="fas fa-times"></i>
+        ) : (
+          <i className="fas fa-bars"></i>
+        )}
+      </button>
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;
