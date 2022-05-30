@@ -104,7 +104,7 @@ const Quba = () => {
                     fillOpacity: 0.7,
                     weight: 2,
                     opacity: 1,
-                    color: "white",
+                    color: "black",
                   });
                 },
                 mouseout: (e) => {
@@ -113,7 +113,7 @@ const Quba = () => {
                     fillOpacity: 0.7,
                     weight: 1,
                     dashArray: "3",
-                    color: "white",
+                    color: "black",
                     fillColor: "rgb(106, 114, 132)",
                   });
                 },
