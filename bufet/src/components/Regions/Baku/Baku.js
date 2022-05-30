@@ -39,9 +39,9 @@ const Baku = () => {
           attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
         />
         {/* <ZoomControl
-      zoomControl={false}
-      >
-      </ZoomControl> */}
+        zoomControl={false}
+        >
+        </ZoomControl> */}
         <Marker
           position={[40.36622198038845, 49.83723127005067]}
           icon={markerIcon}
@@ -58,7 +58,23 @@ const Baku = () => {
             <a>Palace of the Shirvanshahs </a>
           </Popup>
         </Marker>
-        
+        <Marker
+          position={[40.35951202132146, 49.82644461118334]}
+          icon={markerIcon}
+        >
+          <Popup>
+            <a>Flame towers </a>
+          </Popup>
+        </Marker>
+        <Marker
+          position={[40.396314795075426, 49.86784942251023]}
+          icon={markerIcon}
+        >
+          <Popup>
+            <a>Heydar Aliyev Center </a>
+          </Popup>
+        </Marker>
+
         {statesData.features.map((state) => {
           const coordinates = state.geometry.coordinates[0].map((item) => [
             item[1],
