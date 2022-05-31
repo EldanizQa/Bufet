@@ -13,6 +13,8 @@ import Baku from "./components/Regions/Baku/Baku";
 import Nakhchivan from "./components/Regions/Nakhchivan/Nakhchivan";
 import Shusha from "./components/Regions/Shusha/Shusha";
 import Sliders from "./components/Slider/Slider";
+import Comments from "./components/Comments/Comments";
+import "./components/Comments/Comments.css"
 function App() {
   return (
     <div className="App">
@@ -29,9 +31,16 @@ function App() {
         <Route path="/shusha" element={<Shusha />} />
       </Routes>
       <Sliders />
+      <Comments
+       
+        currentUserId="1"
+      />
       <Footer />
     </div>
   );
 }
 
 export default App;
+
+
+

@@ -18,7 +18,7 @@ const markerIcon = L.icon({
   iconSize: [35, 40],
 });
 const center = [40.40508337134207, 49.86391827210291];
-let zoom = 13;
+let zoom = 10;
 const Baku = () => {
   return (
     <div className="map-div">
@@ -26,7 +26,7 @@ const Baku = () => {
         zoomControl={true}
         center={center}
         zoom={zoom}
-        scrollWheelZoom={false}
+        scrollWheelZoom={true}
         style={{
           width: "100%",
           height: "100vh",
@@ -35,7 +35,7 @@ const Baku = () => {
         className="map-container"
       >
         <TileLayer
-          url="https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=dZOt5h8VzjgQ9hrjLbT7"
+          url="https://api.maptiler.com/maps/openstreetmap/256/{z}/{x}/{y}.jpg?key=dZOt5h8VzjgQ9hrjLbT7"
           attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
         />
         {/* <ZoomControl
@@ -68,8 +68,8 @@ const Baku = () => {
           return (
             <Polygon
               pathOptions={{
-                fillColor: "rgb(106, 114, 132)",
-                fillOpacity: 0.7,
+                // fillColor: "rgb(106, 114, 132)",
+                fillOpacity: 0.0,
                 weight: 1,
                 opacity: 1,
                 dashArray: 3,
@@ -80,21 +80,21 @@ const Baku = () => {
                 mouseover: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    fillColor: "orange",
-                    fillOpacity: 0.7,
+                    // fillColor: "orange",
+                    fillOpacity: 0.0,
                     weight: 2,
                     opacity: 1,
-                    color: "white",
+                    color: "red",
                   });
                 },
                 mouseout: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    fillOpacity: 0.7,
-                    weight: 1,
-                    dashArray: "3",
-                    color: "white",
-                    fillColor: "rgb(106, 114, 132)",
+                    fillOpacity: 0.0,
+                    weight: 2,
+                    dashArray: "4",
+                    color: "orange",
+                    // fillColor: "rgb(106, 114, 132)",
                   });
                 },
                 click: (e) => {},

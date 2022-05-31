@@ -2,11 +2,9 @@ export const statesData = {
   type: "FeatureCollection",
   features: [
     {
-      type: "Feature",
       id: "01",
-      properties: { name: "Alabama", density: 94.65 },
       geometry: {
-        type: "Polygon",
+        type: "LineString",
         coordinates: [
           [
             [
