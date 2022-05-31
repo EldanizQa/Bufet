@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Header/Header";
+import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
 import Travel from "./components/Travel/Travel";
@@ -17,10 +17,11 @@ import BakuInfo from "./components/Regions/Baku/BakuInfo";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Header />
       {/* <Map/> */}
       <Routes>
         <Route path="/about" element={<About />} />
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/travel" element={<Travel />} />
         <Route path="/contact" element={<Contact />} />
