@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css";
-const Sliders = () => {
+// import Azerbaijan from "../Azerbaijan/Azerbaijan";
+const Sliders = (props) => {
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -38,25 +39,20 @@ const Sliders = () => {
   };
   return (
     <Slider className="slider" {...settings}>
-      <div className="card-wrapper">
-        <div className="card">
-          <div className="card-image">
-            <img src={require("")} />
-          </div>
-          <div className="details">
-            <h2> "" </h2>
-            <span className="job-title">
-              {/* The Maiden Tower tower is rightly called the most mysterious
-              monument in Baku. It is located on the territory of the Icheri
-              Sheher fortress. The uniqueness of the architecture of Gyz Galasy
-              lies in the fact that the tower is located on a ledge of a large
-              rock. A gray lime cylinder was used as a building material. The
-              height of the fortress reaches 28 m, and its diameter is 16.5 m. */}
-              ""
-            </span>
+      {props.slider.map((el) => (
+        <div className="card-wrapper">
+          <div className="card">
+            <div className="card-image">
+              <img src={el.src} />
+            </div>
+            <div className="details">
+              <h2> {el.title} </h2>
+              <span className="job-title">{el.description}</span>
+            </div>
           </div>
         </div>
-      </div>
+      ))}
+
       {/* <div className="card-wrapper">
         <div className="card">
           <div className="card-image">

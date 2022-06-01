@@ -31,7 +31,7 @@ function App() {
         <Route path="/shusha" element={<Shusha />} />
         <Route path="/baku" element={<BakuInfo />} />
       </Routes>
-      <Sliders />
+      {/* <Sliders /> */}
       <Footer />
     </div>
   );
