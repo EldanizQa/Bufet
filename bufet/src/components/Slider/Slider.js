@@ -41,22 +41,23 @@ const Sliders = () => {
       <div className="card-wrapper">
         <div className="card">
           <div className="card-image">
-            <img src={require("../../assets/images/1.jpg")} />
+            <img src={require("")} />
           </div>
           <div className="details">
-            <h2>Maiden Tower </h2>
+            <h2> "" </h2>
             <span className="job-title">
-              The Maiden Tower tower is rightly called the most mysterious
+              {/* The Maiden Tower tower is rightly called the most mysterious
               monument in Baku. It is located on the territory of the Icheri
               Sheher fortress. The uniqueness of the architecture of Gyz Galasy
               lies in the fact that the tower is located on a ledge of a large
               rock. A gray lime cylinder was used as a building material. The
-              height of the fortress reaches 28 m, and its diameter is 16.5 m.
+              height of the fortress reaches 28 m, and its diameter is 16.5 m. */}
+              ""
             </span>
           </div>
         </div>
       </div>
-      <div className="card-wrapper">
+      {/* <div className="card-wrapper">
         <div className="card">
           <div className="card-image">
             <img src={require("../../assets/images/2.jpg")} />
@@ -250,7 +251,7 @@ const Sliders = () => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
     </Slider>
   );
 };
