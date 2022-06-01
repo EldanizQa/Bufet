@@ -73,7 +73,7 @@
   .nav-links-mobile {
     display: block;
     list-style: none;
-    background-color: rgb(106, 114, 132);
+    background-color: rgb(38, 38, 38);
     left: 0;
     top: 75px;
     transition: all 0.5s ease-out;
