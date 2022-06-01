@@ -162,12 +162,16 @@ const Quba = () => {
         </MapContainer>
       </div>
       {currentMarker && (
-        <div>
-          <div>{currentMarker.title}</div>
-          <div>
+        <div className="newDivAfterClickOnMarker">
+          <div className="newDivAfterClickOnMarker_title">
+            {currentMarker.title}
+          </div>
+          <div className="newDivAfterClickOnMarker_img">
             <img src={currentMarker.src} />
           </div>
-          <div>{currentMarker.descriprion}</div>
+          <div className="newDivAfterClickOnMarker_description">
+            {currentMarker.descriprion}
+          </div>
         </div>
       )}
       <div className="sliderAz">

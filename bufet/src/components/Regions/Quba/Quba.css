@@ -1,0 +1,29 @@
+.newDivAfterClickOnMarker {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.newDivAfterClickOnMarker_title {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.newDivAfterClickOnMarker_img {
+  height: auto;
+  max-width: 720px;
+  margin: 0px auto;
+  display: block;
+}
+.newDivAfterClickOnMarker_img img {
+  border-radius: 5%;
+}
+
+.newDivAfterClickOnMarker_description {
+  margin: 40px auto;
+  max-width: 720px;
+  font-size: 22px;
+}
