@@ -8,10 +8,10 @@ const Footer = () => {
           <div className="footer__content">
             <a className="footer__logo">
               <img
-                // src={require("../../assets/Icons/1.png")}
+                src={require("../../assets/Icons/RestMap (2).png")}
                 className="footer__img"
                 width={"120px"}
-                height={"80px"}
+                height={"100px"}
               />
             </a>
             <div className="footer__sitemap">

@@ -14,8 +14,8 @@
 }
 
 .logo {
-  font-size: 30px;
-  color: orange;
+  width: 120px;
+  height: 100px;
 }
 
 .nav-links {
@@ -60,8 +60,10 @@
   .logo {
     display: flex;
     position: absolute;
-    top: 15px;
+    top: 5px;
     left: 35px;
+    width: 100px;
+    height: 70px;
   }
 
   .nav-links {

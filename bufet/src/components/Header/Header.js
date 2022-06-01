@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 
-const Navbar = () => {
+const Header = () => {
   const [isMobile, setisMobile] = useState(false);
 
   return (
     <nav className="navbar">
-      {/* <NavLink to='/'> */}
-      {/* <img className="logo" src={require('../../assets/Icons/logo.png')}/> */}
-      {/* </NavLink> */}
-      {/* <h3 className='logo'>RestMap</h3> */}
-      <h3 className="logo">RestMap</h3>
+      <NavLink to="/home">
+        <img
+          className="logo"
+          src={require("../../assets/Icons/RestMap (2).png")}
+        />
+      </NavLink>
+      {/* <h3 className="logo">RestMap</h3> */}
       <ul
         className={isMobile ? "nav-links-mobile" : "nav-links"}
         onClick={() => setisMobile(false)}
@@ -43,4 +45,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  Polygon,
-  Marker,
-  Popup,
-  ZoomControl,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Polygon, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { statesData } from "./data";
 import "./Azerbaijan.css";
@@ -17,36 +10,38 @@ const markerIcon = L.icon({
   iconUrl: require("../../assets/Icons/icon2.png"),
   iconSize: [35, 40],
 });
-let zoom = 8;
+// let zoom = 8;
 const center = [40.367421050763554, 48.15512358371176];
 const Azerbaijan = () => {
   // const [dimension, setDimension] = useState({
   //   width: window.innerWidth,
   //   height: window.innerHeight,
   // });
-  // const [zoom, setZoom] = useState(8);
   // const handler = () => {
-  //   setDimension({
-  //     width: window.innerWidth,
-  //     height: window.innerHeight,
-  //   });
-  //   setZoom(7);
+  //   // console.log(window.innerWidth)
+  //   if (window.innerWidth === 800) {
+  //     setDimension({
+  //       width: window.innerWidth,
+  //       height: window.innerHeight,
+  //     });
+  //     document.querySelector(".leaflet-control-zoom-out").click();
+  //   }
   // };
   // useEffect(() => {
   //   // initiate the event handler
-  //   window.addEventListener("optimizedResize", handler, false);
+  //   window.addEventListener("resize", handler, false);
 
   //   // this will clean up the event every time the component is re-rendered
   //   return function cleanup() {
-  //     window.removeEventListener("optimizedResize", handler);
+  //     window.removeEventListener("resize", handler);
   //   };
-  // });
+  // }, []);
   return (
     <div className="map-div">
       <MapContainer
         zoomControl={true}
         center={center}
-        zoom={zoom}
+        zoom={8}
         scrollWheelZoom={false}
         style={{
           width: "100%",
@@ -56,7 +51,7 @@ const Azerbaijan = () => {
         className="map-container"
       >
         <TileLayer
-          url="https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=dZOt5h8VzjgQ9hrjLbT7"
+          url="https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=dZOt5h8VzjgQ9hrjLbT7"
           attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
         />
         {/* <ZoomControl
