@@ -1,36 +1,33 @@
 import React from "react";
 import "./Comment.css";
-class CommentForm extends React.Component {
-  render() {
-    return (
-      <form className="comment-form" onSubmit={this._handleSubmit.bind(this)}>
-        <div className="comment-form-fields">
-          <input
-            placeholder="Name"
-            required
-            ref={(input) => (this._author = input)}
-          ></input>
-          <br />
-          <textarea
-            placeholder="Comment"
-            rows="4"
-            required
-            ref={(textarea) => (this._body = textarea)}
-          ></textarea>
-        </div>
-        <div className="comment-form-actions">
-          <button type="submit">Post Comment</button>
-        </div>
-      </form>
-    );
-  } // end render
-
-  _handleSubmit(event) {
-    event.preventDefault(); // prevents page from reloading on submit
-    let author = this._author;
-    let body = this._body;
-    this.props.addComment(author.value, body.value);
-  }
-} // end CommentForm component
+const CommentForm = (props) => {
+  let author = null;
+  let body = null;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.addComment(author.value, body.value);
+  };
+  return (
+    <form className="comment-form" onSubmit={handleSubmit}>
+      <div className="comment-form-fields">
+        <input
+          placeholder="Name"
+          required
+          ref={(input) => (author = input)}
+        ></input>
+        <br />
+        <textarea
+          placeholder="Comment"
+          rows="4"
+          required
+          ref={(textarea) => (body = textarea)}
+        ></textarea>
+      </div>
+      <div className="comment-form-actions">
+        <button type="submit">Post Comment</button>
+      </div>
+    </form>
+  );
+};
 
 export default CommentForm;

@@ -7,6 +7,16 @@ button {
   display: inline-block;
   text-decoration: none;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
 .comment-box {
   color: #fff;
   background-color: #909090;
@@ -29,26 +39,35 @@ button {
 .comment-form-fields {
   margin-bottom: 0.25rem;
 }
-input,
-textarea {
+
+.comment-form-fields input,
+.comment-form-fields textarea {
   border: none;
-  /* border-bottom: 1px solid $dark-grey; */
+  border-bottom: 1px solid grey;
   font-size: 0.85rem;
   padding: 0.25rem 0;
   width: 99%;
 }
-.comment-form-actions {
+
+.comment-form-fields input:focus,
+.comment-form-fields textarea:focus {
+  border-bottom-color: blue;
+  outline: none;
+}
+
+.comment-form-fields textarea {
+  font-style: italic;
 }
 .comment-count {
-  /* color: $dark-grey; */
+  color: darkgray;
 }
 #comment-reveal {
   float: right;
-  /* background-color: $nc-blue; */
+  background-color: blue;
   color: #fff;
 }
 .comment {
-  /* border-top: 0.125rem solid $dark-grey; */
+  border-top: 0.125rem solid darkgray;
 }
 .comment-body {
   font-style: italic;
@@ -59,6 +78,11 @@ textarea {
 }
 .comment-footer-delete {
   padding: 0.2rem 0;
-  /* color: $dark-grey; */
+  color: darkgray;
   text-decoration: none;
+}
+
+.comment-footer-delete:hover {
+  color: blue;
+  font-weight: bold;
 }
