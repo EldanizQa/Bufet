@@ -19,39 +19,19 @@ const Footer = () => {
                 <h5 className="footer__title">DEVELOPERS</h5>
                 <ul className="list">
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="footer__column">
-                <h5 className="footer__title">DEVELOPERS</h5>
-                <ul className="list">
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                 </ul>
               </div>
@@ -59,39 +39,19 @@ const Footer = () => {
                 <h5 className="footer__title">DEVELOPERS</h5>
                 <ul className="list">
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="footer__column">
-                <h5 className="footer__title">DEVELOPERS</h5>
-                <ul className="list">
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
-                  </li>
-                  <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                 </ul>
               </div>
@@ -99,19 +59,59 @@ const Footer = () => {
                 <h5 className="footer__title">DEVELOPERS</h5>
                 <ul className="list">
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                   <li className="footer__list-item">
-                    <a className="footer__list-link">Aqil Wemi Eldeniz</a>
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="footer__column">
+                <h5 className="footer__title">DEVELOPERS</h5>
+                <ul className="list">
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="footer__column">
+                <h5 className="footer__title">DEVELOPERS</h5>
+                <ul className="list">
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
+                  </li>
+                  <li className="footer__list-item">
+                    <a className="footer__list-link">Aqil Shamistan Eldaniz</a>
                   </li>
                 </ul>
               </div>
