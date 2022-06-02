@@ -12,7 +12,7 @@ import { statesData } from "./data";
 import "./Baku.css";
 import L, { marker } from "leaflet";
 import Sliders from "../../Slider/Slider";
-
+import CommentBox from "../../Comment/CommentBox";
 const markerIcon = L.icon({
   iconUrl: require("../../../assets/Icons/icon2.png"),
   iconSize: [35, 40],
@@ -162,11 +162,16 @@ const Baku = () => {
         </MapContainer>
         {currentMarker && (
           <div className="newDivAfterClickOnMarker">
-            <div className="newDivAfterClickOnMarker_title">{currentMarker.title}</div>
-            <div className="newDivAfterClickOnMarker_img">
-              <img src={currentMarker.src}/>
+            <div className="newDivAfterClickOnMarker_title">
+              {currentMarker.title}
             </div>
-            <div className="newDivAfterClickOnMarker_description">{currentMarker.descriprion}</div>
+            <div className="newDivAfterClickOnMarker_img">
+              <img src={currentMarker.src} />
+            </div>
+            <div className="newDivAfterClickOnMarker_description">
+              {currentMarker.descriprion}
+            </div>
+            <CommentBox />
           </div>
         )}
       </div>
