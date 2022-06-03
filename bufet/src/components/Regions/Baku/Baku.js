@@ -84,33 +84,33 @@ const Baku = () => {
           return (
             <Polygon
               pathOptions={{
-                // fillColor: "rgb(106, 114, 132)",
-                fillOpacity: 0.0,
+                fillColor: "#8bac55",
+                fillOpacity: 0.7,
                 weight: 1,
                 opacity: 1,
                 dashArray: 3,
-                color: "black",
+                color: "white",
               }}
               positions={coordinates}
               eventHandlers={{
                 mouseover: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    // fillColor: "orange",
-                    fillOpacity: 0.0,
+                    fillColor: "#808000",
+                    fillOpacity: 0.7,
                     weight: 2,
                     opacity: 1,
-                    color: "red",
+                    color: "white",
                   });
                 },
                 mouseout: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    fillOpacity: 0.0,
-                    weight: 2,
-                    dashArray: "4",
-                    color: "orange",
-                    // fillColor: "rgb(106, 114, 132)",
+                    fillOpacity: 0.7,
+                    weight: 1,
+                    dashArray: "3",
+                    color: "white",
+                    fillColor: "#8bac55",
                   });
                 },
                 click: (e) => {},

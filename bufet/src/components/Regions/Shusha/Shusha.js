@@ -88,7 +88,7 @@ const Shusha = () => {
           return (
             <Polygon
               pathOptions={{
-                fillColor: "rgb(106, 114, 132)",
+                fillColor: "#8bac55",
                 fillOpacity: 0.7,
                 weight: 1,
                 opacity: 1,
@@ -100,7 +100,7 @@ const Shusha = () => {
                 mouseover: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    fillColor: "orange",
+                    fillColor: "#7FFFD4",
                     fillOpacity: 0.7,
                     weight: 2,
                     opacity: 1,
@@ -114,7 +114,7 @@ const Shusha = () => {
                     weight: 1,
                     dashArray: "3",
                     color: "white",
-                    fillColor: "rgb(106, 114, 132)",
+                    fillColor: "#8bac55",
                   });
                 },
                 click: (e) => {},

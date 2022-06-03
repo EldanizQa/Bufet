@@ -15,10 +15,10 @@ import { Link } from "react-router-dom";
 
 const markerIcon = L.icon({
   iconUrl: require("../../../assets/Icons/icon2.png"),
-  iconSize: [35, 40],
+  iconSize: [30, 37],
 });
-const center = [41.191148227358866, 48.49190523563717];
-let zoom = 10;
+const center = [39.211516268938695, 45.606388741996675];
+let zoom = 9;
 const Nakhchivan = () => {
   return (
     <div className="map-div">
@@ -88,7 +88,7 @@ const Nakhchivan = () => {
           return (
             <Polygon
               pathOptions={{
-                fillColor: "rgb(106, 114, 132)",
+                fillColor: "#8bac55",
                 fillOpacity: 0.7,
                 weight: 1,
                 opacity: 1,
@@ -100,7 +100,7 @@ const Nakhchivan = () => {
                 mouseover: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    fillColor: "orange",
+                    fillColor: "#20B2AA",
                     fillOpacity: 0.7,
                     weight: 2,
                     opacity: 1,
@@ -114,7 +114,7 @@ const Nakhchivan = () => {
                     weight: 1,
                     dashArray: "3",
                     color: "white",
-                    fillColor: "rgb(106, 114, 132)",
+                    fillColor: "#8bac55",
                   });
                 },
                 click: (e) => {},

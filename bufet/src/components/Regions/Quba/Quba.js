@@ -88,7 +88,7 @@ const Quba = () => {
           return (
             <Polygon
               pathOptions={{
-                fillColor: "rgb(106, 114, 132)",
+                fillColor: "#F0E68C",
                 fillOpacity: 0.7,
                 weight: 1,
                 opacity: 1,
@@ -100,11 +100,11 @@ const Quba = () => {
                 mouseover: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    fillColor: "orange",
+                    fillColor: "#808000",
                     fillOpacity: 0.7,
                     weight: 2,
                     opacity: 1,
-                    color: "black",
+                    color: "green",
                   });
                 },
                 mouseout: (e) => {
@@ -113,8 +113,8 @@ const Quba = () => {
                     fillOpacity: 0.7,
                     weight: 1,
                     dashArray: "3",
-                    color: "black",
-                    fillColor: "rgb(106, 114, 132)",
+                    color: "green",
+                    fillColor: "#F0E68C",
                   });
                 },
                 click: (e) => {},

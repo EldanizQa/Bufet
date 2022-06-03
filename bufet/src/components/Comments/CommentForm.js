@@ -13,6 +13,7 @@ const CommentForm = ({
     event.preventDefault();
     handleSubmit(text);
     setText("");
+    console.log(initialText)
   };
   return (
     <form onSubmit={onSubmit}>

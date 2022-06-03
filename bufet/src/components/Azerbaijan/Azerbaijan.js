@@ -88,8 +88,8 @@ const Azerbaijan = () => {
           return (
             <Polygon
               pathOptions={{
-                fillColor: "rgb(106, 114, 132)",
-                fillOpacity: 0.4,
+                fillColor: "#8bac55",
+                fillOpacity: 0.8,
                 weight: 1,
                 opacity: 1,
                 dashArray: 3,
@@ -100,7 +100,7 @@ const Azerbaijan = () => {
                 mouseover: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    fillColor: "#FFFF00",
+                    fillColor: "#FFD700",
                     fillOpacity: 0.9,
                     weight: 2,
                     opacity: 1,
@@ -110,11 +110,11 @@ const Azerbaijan = () => {
                 mouseout: (e) => {
                   const layer = e.target;
                   layer.setStyle({
-                    fillOpacity: 0.4,
+                    fillOpacity: 0.8,
                     weight: 1,
                     dashArray: "3",
                     color: "white",
-                    fillColor: "rgb(106, 114, 132)",
+                    fillColor: "#8bac55",
                   });
                 },
                 click: (e) => {},

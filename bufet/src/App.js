@@ -32,8 +32,7 @@ function App() {
       </Routes>
       <Sliders />
       <Comments
-       
-        currentUserId="1"
+  currentUserId="1"
       />
       <Footer />
     </div>

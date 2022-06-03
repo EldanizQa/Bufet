@@ -11,9 +11,11 @@ import {
 
 const Comments = ({ commentsUrl, currentUserId }) => {
   const [backendComments, setBackendComments] = useState([]);
+  console.log("backendComments", backendComments)
   const [activeComment, setActiveComment] = useState(null);
   const rootComments = backendComments.filter(
     (backendComment) => backendComment.parentId === null
+    
   );
   const getReplies = (commentId) =>
     backendComments
@@ -36,6 +38,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
           return { ...backendComment, body: text };
         }
         return backendComment;
+        
       });
       setBackendComments(updatedBackendComments);
       setActiveComment(null);
