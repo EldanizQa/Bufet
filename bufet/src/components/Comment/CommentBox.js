@@ -3,21 +3,21 @@ import CommentForm from "./CommentForm";
 import Comment from "./Comment";
 import "./Comment.css";
 import {
-  getComments as getCommentsApi,
   createComment as createCommentApi,
   updateComment as updateCommentApi,
   deleteComment as deleteCommentApi,
 } from "./api";
+import { getComments } from "../../REST";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
   const [backendComments, setBackendComments] = useState([]);
   const [activeComment, setActiveComment] = useState(null);
-  const rootComments = backendComments.filter(
+  const rootComments = backendComments?.filter(
     (backendComment) => backendComment.parentId === null
   );
   const getReplies = (commentId) =>
     backendComments
-      .filter((backendComment) => backendComment.parentId === commentId)
+      ?.filter((backendComment) => backendComment.parentId === commentId)
       .sort(
         (a, b) =>
           new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
@@ -53,8 +53,8 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   };
 
   useEffect(() => {
-    getCommentsApi().then((data) => {
-      setBackendComments(data);
+    getComments().then((data) => {
+      setBackendComments(data || []);
     });
   }, []);
 

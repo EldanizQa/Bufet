@@ -18,8 +18,8 @@ const markerIcon = L.icon({
   iconUrl: require("../../../assets/Icons/icon2.png"),
   iconSize: [35, 40],
 });
-const center = [41.191148227358866, 48.49190523563717];
-let zoom = 10;
+const center = [39.211516268938695, 45.606388741996675];
+let zoom = 9;
 const Nakhchivan = () => {
   const sliderObj = [
     {
