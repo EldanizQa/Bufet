@@ -39,8 +39,8 @@ const Sliders = (props) => {
   };
   return (
     <Slider className="slider" {...settings}>
-      {props.slider.map((el) => (
-        <div className="card-wrapper">
+      {props.slider.map((el, index) => (
+        <div className="card-wrapper" key={index}>
           <div className="card">
             <div className="card-image">
               <img src={el.src} />

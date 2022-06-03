@@ -13,17 +13,34 @@
 }
 
 .newDivAfterClickOnMarker_img {
-	height: auto;
-	max-width: 720px;
+  height: auto;
+  max-width: 720px;
   margin: 0px auto;
-  display: block;
+  padding: 5%;
 }
-.newDivAfterClickOnMarker_img img{
-	border-radius: 5%;
+.newDivAfterClickOnMarker_img img {
+  border-radius: 5%;
 }
 
-.newDivAfterClickOnMarker_description{
-	margin: 40px auto;
-	max-width: 720px;
-	font-size: 22px;
+.newDivAfterClickOnMarker_description {
+  margin: 40px auto;
+  max-width: 720px;
+  font-size: 22px;
+}
+
+.imgAndText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 791px) {
+  .imgAndText {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .newDivAfterClickOnMarker_description {
+    font-size: 18px;
+    padding: 20px;
+  }
 }

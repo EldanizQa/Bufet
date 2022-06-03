@@ -1,81 +1,85 @@
-import React, { useState } from "react";
-import "./Comment.css";
+import { useState, useEffect } from "react";
+import CommentForm from "./CommentForm";
 import Comment from "./Comment";
-import CommentForm from "./CommentFrom";
-const CommentBox = () => {
-  const [showComments, setsShowComments] = useState(false);
-  const [comments, setComments] = useState([
-    {
-      id: 1,
-      author: "landiggity",
-      body: "This is my first comment on this forum so don't be a dick",
-    },
-    {
-      id: 2,
-      author: "scarlett-jo",
-      body: "That's a mighty fine comment you've got there my good looking fellow...",
-    },
-    {
-      id: 3,
-      author: "rosco",
-      body: "What is the meaning of all of this 'React' mumbo-jumbo?",
-    },
-  ]);
+import "./Comment.css";
+import {
+  getComments as getCommentsApi,
+  createComment as createCommentApi,
+  updateComment as updateCommentApi,
+  deleteComment as deleteCommentApi,
+} from "./api";
 
-  const _addComment = (author, body) => {
-    const comment = {
-      id: comments.length + 1,
-      author,
-      body,
-    };
-    setComments([...comments, comment]);
-  };
-
-  const _handleClick = () => {
-    setsShowComments({
-      showComments: !showComments,
-    });
-  };
-
-  const _getComments = () => {
-    return comments.map((comment) => {
-      return (
-        <Comment author={comment.author} body={comment.body} key={comment.id} />
+const Comments = ({ commentsUrl, currentUserId }) => {
+  const [backendComments, setBackendComments] = useState([]);
+  const [activeComment, setActiveComment] = useState(null);
+  const rootComments = backendComments.filter(
+    (backendComment) => backendComment.parentId === null
+  );
+  const getReplies = (commentId) =>
+    backendComments
+      .filter((backendComment) => backendComment.parentId === commentId)
+      .sort(
+        (a, b) =>
+          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
       );
+  const addComment = (text, parentId) => {
+    createCommentApi(text, parentId).then((comment) => {
+      setBackendComments([comment, ...backendComments]);
+      setActiveComment(null);
     });
   };
 
-  const _getCommentsTitle = (commentCount) => {
-    if (commentCount === 0) {
-      return "No comments yet";
-    } else if (commentCount === 1) {
-      return "1 comment";
-    } else {
-      return `${commentCount} comments`;
+  const updateComment = (text, commentId) => {
+    updateCommentApi(text).then(() => {
+      const updatedBackendComments = backendComments.map((backendComment) => {
+        if (backendComment.id === commentId) {
+          return { ...backendComment, body: text };
+        }
+        return backendComment;
+      });
+      setBackendComments(updatedBackendComments);
+      setActiveComment(null);
+    });
+  };
+  const deleteComment = (commentId) => {
+    if (window.confirm("Are you sure you want to remove comment?")) {
+      deleteCommentApi().then(() => {
+        const updatedBackendComments = backendComments.filter(
+          (backendComment) => backendComment.id !== commentId
+        );
+        setBackendComments(updatedBackendComments);
+      });
     }
   };
 
-  const commentss = _getComments();
-  let commentNodes;
-  let buttonText = "Show Comments";
-
-  if (showComments) {
-    buttonText = "Hide Comments";
-    commentNodes = <div className="comment-list">{commentss}</div>;
-  }
+  useEffect(() => {
+    getCommentsApi().then((data) => {
+      setBackendComments(data);
+    });
+  }, []);
 
   return (
-    <div className="comment-box">
-      <h2>Join the Discussion!</h2>
-      <CommentForm addComment={_addComment} />
-      <button id="comment-reveal" onClick={_handleClick}>
-        {buttonText}
-      </button>
-      <h3>Comments</h3>
-      <h4 className="comment-count">{_getCommentsTitle(commentss.length)}</h4>
-      {commentNodes}
+    <div className="comments">
+      <h3 className="comments-title">Comments</h3>
+      <div className="comment-form-title">Write comment</div>
+      <CommentForm submitLabel="Write" handleSubmit={addComment} />
+      <div className="comments-container">
+        {rootComments.map((rootComment) => (
+          <Comment
+            key={rootComment.id}
+            comment={rootComment}
+            replies={getReplies(rootComment.id)}
+            activeComment={activeComment}
+            setActiveComment={setActiveComment}
+            addComment={addComment}
+            deleteComment={deleteComment}
+            updateComment={updateComment}
+            currentUserId={currentUserId}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default CommentBox;
+export default Comments;

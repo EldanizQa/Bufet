@@ -108,8 +108,8 @@ const Baku = () => {
         >
         </ZoomControl> */}
 
-          {markers.map((marker) => (
-            <Marker position={marker.positions} icon={markerIcon}>
+          {markers.map((marker, index) => (
+            <Marker position={marker.positions} icon={markerIcon} key={index}>
               <Popup>
                 <a onClick={() => getMarker(marker)}>{marker.title}</a>
               </Popup>
@@ -165,13 +165,15 @@ const Baku = () => {
             <div className="newDivAfterClickOnMarker_title">
               {currentMarker.title}
             </div>
-            <div className="newDivAfterClickOnMarker_img">
-              <img src={currentMarker.src} />
+            <div className="imgAndText">
+              <div className="newDivAfterClickOnMarker_img">
+                <img src={currentMarker.src} />
+              </div>
+              <div className="newDivAfterClickOnMarker_description">
+                {currentMarker.descriprion}
+              </div>
             </div>
-            <div className="newDivAfterClickOnMarker_description">
-              {currentMarker.descriprion}
-            </div>
-            <CommentBox />
+            <CommentBox currentUserId="1" />
           </div>
         )}
       </div>
