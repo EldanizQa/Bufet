@@ -5,7 +5,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({ origin: "*" }));
 
-const comments = [
+let comments = [
   {
     id: "1",
     body: "First comment",
@@ -41,6 +41,16 @@ const comments = [
 ];
 
 app.get("/comments", function (req, res) {
+  res.json(comments);
+});
+
+app.post("/setComments", function (req, res) {
+  comments.unshift(req.body);
+});
+
+app.delete("/deleteComments/:id", function (req, res) {
+  const idOfUser = req.params.id;
+  comments = comments.filter((comment) => comment.id !== idOfUser);
   res.json(comments);
 });
 

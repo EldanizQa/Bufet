@@ -7,7 +7,7 @@ import {
   updateComment as updateCommentApi,
   deleteComment as deleteCommentApi,
 } from "./api";
-import { getComments } from "../../REST";
+import { getComments, sendComments, deleteComments } from "../../REST";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
   const [backendComments, setBackendComments] = useState([]);
@@ -25,6 +25,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   const addComment = (text, parentId) => {
     createCommentApi(text, parentId).then((comment) => {
       setBackendComments([comment, ...backendComments]);
+      sendComments(comment);
       setActiveComment(null);
     });
   };
@@ -48,6 +49,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
           (backendComment) => backendComment.id !== commentId
         );
         setBackendComments(updatedBackendComments);
+        deleteComments(commentId);
       });
     }
   };
