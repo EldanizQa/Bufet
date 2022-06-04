@@ -13,7 +13,7 @@ import Baku from "./components/Regions/Baku/Baku";
 import Nakhchivan from "./components/Regions/Nakhchivan/Nakhchivan";
 import Shusha from "./components/Regions/Shusha/Shusha";
 import Sliders from "./components/Slider/Slider";
-import BakuInfo from "./components/Regions/Baku/BakuInfo";
+
 function App() {
   return (
     <div className="App">
@@ -29,7 +29,6 @@ function App() {
         <Route path="/baku" element={<Baku />} />
         <Route path="/nakhchivan" element={<Nakhchivan />} />
         <Route path="/shusha" element={<Shusha />} />
-        <Route path="/baku" element={<BakuInfo />} />
       </Routes>
       {/* <Sliders /> */}
       <Footer />

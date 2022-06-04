@@ -12,7 +12,7 @@ import { statesData } from "./data";
 import "./Baku.css";
 import L, { marker } from "leaflet";
 import Sliders from "../../Slider/Slider";
-
+import CommentBox from "../../Comment/CommentBox";
 const markerIcon = L.icon({
   iconUrl: require("../../../assets/Icons/icon2.png"),
   iconSize: [35, 40],
@@ -108,8 +108,8 @@ const Baku = () => {
         >
         </ZoomControl> */}
 
-          {markers.map((marker) => (
-            <Marker position={marker.positions} icon={markerIcon}>
+          {markers.map((marker, index) => (
+            <Marker position={marker.positions} icon={markerIcon} key={index}>
               <Popup>
                 <a onClick={() => getMarker(marker)}>{marker.title}</a>
               </Popup>
@@ -125,19 +125,19 @@ const Baku = () => {
             return (
               <Polygon
                 pathOptions={{
-                  fillColor: "rgb(106, 114, 132)",
+                  fillColor: "#8bac55",
                   fillOpacity: 0.7,
                   weight: 1,
                   opacity: 1,
                   dashArray: 3,
-                  color: "black",
+                  color: "white",
                 }}
                 positions={coordinates}
                 eventHandlers={{
                   mouseover: (e) => {
                     const layer = e.target;
                     layer.setStyle({
-                      fillColor: "orange",
+                      fillColor: "#808000",
                       fillOpacity: 0.7,
                       weight: 2,
                       opacity: 1,
@@ -151,7 +151,7 @@ const Baku = () => {
                       weight: 1,
                       dashArray: "3",
                       color: "white",
-                      fillColor: "rgb(106, 114, 132)",
+                      fillColor: "#8bac55",
                     });
                   },
                   click: (e) => {},
@@ -161,12 +161,19 @@ const Baku = () => {
           })}
         </MapContainer>
         {currentMarker && (
-          <div>
-            <div>{currentMarker.title}</div>
-            <div>
-              <img src={currentMarker.src} />
+          <div className="newDivAfterClickOnMarker">
+            <div className="newDivAfterClickOnMarker_title">
+              {currentMarker.title}
             </div>
-            <div>{currentMarker.descriprion}</div>
+            <div className="imgAndText">
+              <div className="newDivAfterClickOnMarker_img">
+                <img src={currentMarker.src} />
+              </div>
+              <div className="newDivAfterClickOnMarker_description">
+                {currentMarker.descriprion}
+              </div>
+            </div>
+            <CommentBox currentUserId="1" />
           </div>
         )}
       </div>
